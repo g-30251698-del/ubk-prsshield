@@ -325,7 +325,27 @@ document.getElementById("status").innerHTML =
 });
 
 }
+function loadAnalytics(){
 
+fetch(SCRIPT_URL)
+.then(res => res.json())
+.then(data => {
+
+document.getElementById("jumlahPelawat").innerHTML =
+data.pelawat;
+
+document.getElementById("jumlahKomen").innerHTML =
+data.komen;
+
+document.getElementById("kemaskiniTerakhir").innerHTML =
+new Date(data.masa).toLocaleString();
+
+})
+.catch(err => console.log(err));
+
+}
+
+loadAnalytics();
 </script>
 </body>
 </html>
