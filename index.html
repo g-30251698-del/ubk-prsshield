@@ -182,7 +182,9 @@ height:auto;
 🧠 Inventori Minat Kerjaya
 </button>
 
-<button class="menu-btn">🏛️ IPTA / IPTS / TVET</button>
+<button class="menu-btn" onclick="loadIPTA()">
+🏛 IPTA / IPTS / TVET
+</button>
 
 <button class="menu-btn">🎓 Biasiswa</button>
 
@@ -735,7 +737,84 @@ Kod Dominan: ${utama}
 `;
 
 }
+function loadIPTA(){
 
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+
+<h2>🏛 IPTA / IPTS / TVET</h2>
+
+<p>Pilih laluan pendidikan selepas SPM:</p>
+
+<div class="grid">
+
+<div class="stat">
+
+<h3>🏛 IPTA</h3>
+
+<p>
+Universiti Awam melalui UPU Online.
+</p>
+
+<a href="https://upu.mohe.gov.my" target="_blank">
+<button>🌐 Buka UPU Online</button>
+</a>
+
+</div>
+
+<div class="stat">
+
+<h3>🏫 IPTS</h3>
+
+<p>
+Semak program yang diiktiraf MQA.
+</p>
+
+<a href="https://www2.mqa.gov.my/mqr/" target="_blank">
+<button>🌐 Semak MQA</button>
+</a>
+
+</div>
+
+<div class="stat">
+
+<h3>🛠 TVET</h3>
+
+<p>
+Pendidikan dan latihan teknikal.
+</p>
+
+<a href="https://www.tvet.gov.my" target="_blank">
+<button>🌐 Portal TVET</button>
+</a>
+
+</div>
+
+</div>
+
+<br>
+
+<div class="card">
+
+<h3>📌 Cadangan Laluan Selepas SPM</h3>
+
+SPM ➜ Matrikulasi ➜ Ijazah ➜ Kerjaya Profesional<br><br>
+
+SPM ➜ STPM ➜ Universiti Awam<br><br>
+
+SPM ➜ Diploma ➜ Ijazah<br><br>
+
+SPM ➜ TVET ➜ Industri Kemahiran Tinggi
+
+</div>
+
+</div>
+
+`;
+
+}
+  
 loadAnalytics();
 </script>
 </body>
