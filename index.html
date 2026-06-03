@@ -186,7 +186,9 @@ height:auto;
 🏛 IPTA / IPTS / TVET
 </button>
 
-<button class="menu-btn">🎓 Biasiswa</button>
+<button class="menu-btn" onclick="loadBiasiswa()">
+🎓 Biasiswa
+</button>
 
 <button class="menu-btn">🔬 STEM Future Jobs</button>
 
@@ -814,7 +816,93 @@ SPM ➜ TVET ➜ Industri Kemahiran Tinggi
 `;
 
 }
-  
+function loadBiasiswa(){
+
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+
+<h2>🎓 Biasiswa Dalam & Luar Negara</h2>
+
+<p>Pilih peluang biasiswa yang ingin diterokai:</p>
+
+<div class="grid">
+
+<div class="stat">
+
+<h3>🇲🇾 Biasiswa Dalam Negara</h3>
+
+<a href="https://www.jpa.gov.my" target="_blank">
+🌐 Jabatan Perkhidmatan Awam (JPA)
+</a>
+
+<br><br>
+
+<a href="https://www.yayasankhazanah.com.my" target="_blank">
+🌐 Yayasan Khazanah
+</a>
+
+<br><br>
+
+<a href="https://www.petronas.com" target="_blank">
+🌐 Biasiswa PETRONAS
+</a>
+
+<br><br>
+
+<a href="https://www.bnm.gov.my" target="_blank">
+🌐 Biasiswa Bank Negara
+</a>
+
+</div>
+
+<div class="stat">
+
+<h3>🌍 Biasiswa Luar Negara</h3>
+
+<a href="https://www.chevening.org" target="_blank">
+🌐 Chevening (UK)
+</a>
+
+<br><br>
+
+<a href="https://www.fulbrightonline.org" target="_blank">
+🌐 Fulbright (USA)
+</a>
+
+<br><br>
+
+<a href="https://www.studyinholland.nl" target="_blank">
+🌐 Holland Scholarship
+</a>
+
+<br><br>
+
+<a href="https://www.daad.de" target="_blank">
+🌐 DAAD (Jerman)
+</a>
+
+</div>
+
+</div>
+
+<div class="card" style="margin-top:20px;">
+
+<h3>💡 Tips Memohon Biasiswa</h3>
+
+✅ Keputusan akademik yang baik<br>
+✅ Aktif kokurikulum<br>
+✅ Kemahiran kepimpinan<br>
+✅ Penglibatan komuniti<br>
+✅ Kemahiran komunikasi
+
+</div>
+
+</div>
+
+`;
+
+} 
 loadAnalytics();
 </script>
 </body>
