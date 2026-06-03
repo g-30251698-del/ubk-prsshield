@@ -4,194 +4,251 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>UBK & PRS SHIELD STEM Career Explorer™</title>
+<title>UBK & PRS SHIELD STEM Career Explorer</title>
 
 <style>
-:root{
-    --primary:#2E005F;
-    --secondary:#6A0DAD;
-    --gold:#FFD700;
-    --light:#f5f2ff;
-}
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
 body{
-    font-family:Segoe UI,Arial,sans-serif;
-    background:var(--light);
+background:#ececf5;
+height:100vh;
+overflow:hidden;
 }
 
-header{
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
-    color:white;
-    padding:25px;
-    text-align:center;
+.header{
+height:90px;
+background:linear-gradient(90deg,#4d008c,#6f2dbd);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+box-shadow:0 2px 8px rgba(0,0,0,.2);
 }
 
-header h1{
-    margin-bottom:10px;
+.header h1{
+font-size:32px;
+font-weight:700;
 }
 
-header .motto{
-    color:var(--gold);
-    font-weight:bold;
+.header p{
+font-size:14px;
+color:#ffd700;
+margin-top:5px;
 }
 
 .container{
-    display:grid;
-    grid-template-columns:280px 1fr;
-    min-height:80vh;
+display:flex;
+height:calc(100vh - 90px);
 }
 
 .sidebar{
-    background:#220046;
-    color:white;
-    padding:20px;
+width:320px;
+background:#21003d;
+padding:20px;
+overflow-y:auto;
 }
 
-.logo-box{
-    text-align:center;
-    margin-bottom:30px;
+.logo-section{
+text-align:center;
+margin-bottom:20px;
 }
 
-.logo-box img{
-    width:120px;
-    border-radius:12px;
+.logo-school{
+width:120px;
+display:block;
+margin:auto;
 }
 
-.menu a{
-    display:block;
-    text-decoration:none;
-    color:white;
-    padding:12px;
-    margin-bottom:10px;
-    background:rgba(255,255,255,.08);
-    border-radius:10px;
-    transition:.3s;
+.logo-prs{
+width:90px;
+display:block;
+margin:20px auto;
 }
 
-.menu a:hover{
-    background:var(--gold);
-    color:black;
+.menu-btn{
+width:100%;
+padding:18px;
+margin-bottom:12px;
+border:none;
+border-radius:15px;
+background:#35115e;
+color:white;
+font-size:18px;
+text-align:left;
+cursor:pointer;
+transition:.3s;
 }
 
-.main{
-    padding:25px;
+.menu-btn:hover{
+background:#55228f;
+transform:translateX(5px);
+}
+
+.content{
+flex:1;
+padding:30px;
+overflow-y:auto;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    margin-bottom:20px;
+background:white;
+border-radius:20px;
+padding:30px;
+margin-bottom:25px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
 .card h2{
-    color:var(--primary);
-    margin-bottom:15px;
+margin-bottom:15px;
+font-size:24px;
+color:#222;
 }
 
-footer{
-    background:var(--primary);
-    color:white;
-    text-align:center;
-    padding:20px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-@media(max-width:768px){
-    .container{
-        grid-template-columns:1fr;
-    }
-
-    .sidebar{
-        text-align:center;
-    }
+.stat{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
+
+.stat h3{
+color:#6f2dbd;
+margin-bottom:10px;
+}
+
+@media(max-width:900px){
+
+.container{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+height:auto;
+}
+
+.content{
+height:auto;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>UBK & PRS SHIELD STEM Career Explorer™</h1>
-
-    <p>SM Sains Lahad Datu (SHIELD)</p>
-
-    <p class="motto">
-        Bantu Diri Untuk Membantu Orang Lain
-    </p>
-</header>
+<div class="header">
+<h1>UBK & PRS SHIELD STEM Career Explorer™</h1>
+<p>SM Sains Lahad Datu (SHIELD)</p>
+</div>
 
 <div class="container">
 
-    <aside class="sidebar">
+<div class="sidebar">
 
-        <div class="logo-box">
-            <img src="logo.png" alt="Logo PRS">
-            <p style="margin-top:10px;">
-                SHIELD STEM Explorer
-            </p>
-        </div>
+<div class="logo-section">
 
-        <nav class="menu">
-            <a href="#">🏠 Utama</a>
-            <a href="#">🎓 Kerjaya STEM</a>
-            <a href="#">🧠 Ujian Minat</a>
-            <a href="#">📚 Laluan Pendidikan</a>
-            <a href="#">👥 PRS</a>
-            <a href="#">📞 Hubungi Kami</a>
-        </nav>
+<img src="logo-sekolah.png" class="logo-school">
 
-    </aside>
-
-    <main class="main">
-
-        <div class="card">
-            <h2>Selamat Datang</h2>
-
-            <p>
-                Portal UBK & PRS SHIELD STEM Career Explorer™
-                dibangunkan untuk membantu murid meneroka
-                peluang kerjaya STEM, laluan pendidikan,
-                pembangunan sahsiah dan perancangan masa depan.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>Kerjaya STEM Popular</h2>
-
-            <ul>
-                <li>Jurutera Aeroangkasa</li>
-                <li>Saintis Data</li>
-                <li>Pakar Keselamatan Siber</li>
-                <li>Doktor Perubatan</li>
-                <li>Pembangun AI</li>
-                <li>Ahli Bioteknologi</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Visi Program</h2>
-
-            <p>
-                Melahirkan generasi SHIELD yang berilmu,
-                berdaya saing dan bersedia menghadapi
-                cabaran kerjaya masa hadapan.
-            </p>
-        </div>
-
-    </main>
+<img src="logo-prs.png" class="logo-prs">
 
 </div>
 
-<footer>
-    © 2025 UBK & PRS SHIELD STEM Career Explorer™
-</footer>
+<button class="menu-btn">🏠 Dashboard</button>
+
+<button class="menu-btn">📚 Ensiklopedia Kerjaya</button>
+
+<button class="menu-btn">🎯 Hala Tuju Selepas SPM</button>
+
+<button class="menu-btn">🧠 Inventori Minat Kerjaya</button>
+
+<button class="menu-btn">🏛️ IPTA / IPTS / TVET</button>
+
+<button class="menu-btn">🎓 Biasiswa</button>
+
+<button class="menu-btn">🔬 STEM Future Jobs</button>
+
+<button class="menu-btn">👨‍🏫 Dashboard Guru</button>
+
+</div>
+
+<div class="content">
+
+<div class="card">
+
+<h2>Selamat Datang</h2>
+
+<p>
+Portal rasmi UBK & PRS SHIELD untuk penerokaan kerjaya STEM,
+laluan pendidikan, pembangunan sahsiah dan perancangan masa depan.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="stat">
+<h3>🚀 Kerjaya STEM Popular</h3>
+<p>
+Jurutera Aeroangkasa<br>
+Saintis Data<br>
+Pakar Keselamatan Siber<br>
+Doktor Perubatan<br>
+Pembangun AI
+</p>
+</div>
+
+<div class="stat">
+<h3>🎓 Biasiswa Terkini</h3>
+<p>
+Biasiswa JPA<br>
+Biasiswa PETRONAS<br>
+Biasiswa Yayasan Khazanah<br>
+Biasiswa Bank Negara
+</p>
+</div>
+
+<div class="stat">
+<h3>🏛️ IPTA / IPTS</h3>
+<p>
+UM<br>
+UKM<br>
+USM<br>
+UTM<br>
+UPM
+</p>
+</div>
+
+<div class="stat">
+<h3>🔬 STEM Future Jobs</h3>
+<p>
+AI Engineer<br>
+Cybersecurity Analyst<br>
+Robotics Engineer<br>
+Data Scientist<br>
+Biotech Researcher
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
