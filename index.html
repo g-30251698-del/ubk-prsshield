@@ -295,20 +295,7 @@ const SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbzXSsvgu80cR19qQo-ktfE6po3fQ3GmosJrH5URjouXtJryA9qGPQ6bGIdSBuNYo-H66g/exec";
 
 function submitVisitor(){
-fetch(SCRIPT_URL)
-.then(res=>res.json())
-.then(data=>{
 
-document.getElementById("jumlahPelawat").innerHTML =
-data.pelawat;
-
-document.getElementById("jumlahKomen").innerHTML =
-data.komen;
-
-document.getElementById("masaKemaskini").innerHTML =
-new Date(data.masa).toLocaleString();
-
-});
 const data = {
 nama: document.getElementById("nama").value,
 sekolah: document.getElementById("sekolah").value,
@@ -317,20 +304,24 @@ komen: document.getElementById("komen").value
 
 fetch(SCRIPT_URL,{
 method:"POST",
-body:JSON.stringify(data)
+body: JSON.stringify(data)
 })
 .then(res=>res.json())
 .then(data=>{
+
 document.getElementById("status").innerHTML =
 "✅ Terima kasih atas komen anda";
 
 document.getElementById("nama").value="";
 document.getElementById("sekolah").value="";
 document.getElementById("komen").value="";
+
 })
 .catch(err=>{
+
 document.getElementById("status").innerHTML =
 "❌ Ralat menghantar komen";
+
 });
 
 }
