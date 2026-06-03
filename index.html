@@ -61,46 +61,46 @@ input{width:100%;padding:14px;font-size:18px}
 </div>
 
 <script>
-const jobs = {
-"jurutera ai": {
-maksud:"Membangunkan sistem kecerdasan buatan.",
-gaji:"RM5,000 - RM25,000+",
-laluan:"SPM STEM → Matrikulasi/Asasi → Ijazah AI/Sains Komputer",
-prospek:"Sangat Tinggi"
-},
-"saintis data": {
-maksud:"Menganalisis data untuk membuat keputusan organisasi.",
-gaji:"RM4,000 - RM18,000+",
-laluan:"SPM STEM → Data Science",
-prospek:"Sangat Tinggi"
-},
-"doktor": {
-maksud:"Merawat dan mendiagnosis pesakit.",
-gaji:"RM4,000 - RM25,000+",
-laluan:"SPM Sains → MBBS",
-prospek:"Tinggi"
-},
-"pakar keselamatan siber": {
-maksud:"Melindungi sistem dan rangkaian daripada serangan siber.",
-gaji:"RM4,500 - RM20,000+",
-laluan:"SPM STEM → Cyber Security",
-prospek:"Sangat Tinggi"
-}
-};
 
-document.getElementById('search').addEventListener('keypress', function(e){
- if(e.key==='Enter'){
-   let q=this.value.toLowerCase().trim();
-   let j=jobs[q];
-   document.getElementById('result').innerHTML = j ?
-   `<h2>${q.toUpperCase()}</h2>
-   <p><b>Maksud:</b> ${j.maksud}</p>
-   <p><b>Gaji:</b> ${j.gaji}</p>
-   <p><b>Laluan Selepas SPM:</b> ${j.laluan}</p>
-   <p><b>Prospek:</b> ${j.prospek}</p>` :
-   '<h2>Tiada rekod</h2><p>Tambah data JSON untuk mencapai 1000+ kerjaya.</p>';
- }
 });
+</script>
+ <script>
+let careers = [];
+
+async function loadCareers() {
+  try {
+    const response = await fetch("data/careers.json");
+    careers = await response.json();
+
+    console.log("Jumlah kerjaya:", careers.length);
+
+    renderCareers(careers);
+  } catch (error) {
+    console.error("Gagal memuatkan careers.json", error);
+  }
+}
+
+function renderCareers(data) {
+  const container = document.getElementById("careerContainer");
+
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  data.forEach(career => {
+    container.innerHTML += `
+      <div class="card">
+        <h3>${career.ikon} ${career.nama}</h3>
+        <p><b>Kategori:</b> ${career.kategori}</p>
+        <p>${career.deskripsi}</p>
+        <p><b>Prospek:</b> ${career.prospek}</p>
+        <p><b>Gaji:</b> RM${career.gaji_masuk} - RM${career.gaji_maksimum}</p>
+      </div>
+    `;
+  });
+}
+
+loadCareers();
 </script>
 </body>
 </html>
