@@ -190,7 +190,9 @@ height:auto;
 🎓 Biasiswa
 </button>
 
-<button class="menu-btn">🔬 STEM Future Jobs</button>
+<button class="menu-btn" onclick="loadFutureJobs()">
+🔬 STEM Future Jobs
+</button>
 
 <button class="menu-btn">👨‍🏫 Dashboard Guru</button>
 
@@ -903,6 +905,114 @@ document.querySelector(".content").innerHTML = `
 `;
 
 } 
+function loadFutureJobs(){
+
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+
+<h2>🔬 STEM Future Jobs</h2>
+
+<p>
+Pekerjaan berpotensi tinggi dalam era AI, Revolusi Industri 4.0 dan ekonomi digital.
+</p>
+
+<div class="grid">
+
+<div class="stat">
+<h3>🤖 AI Engineer</h3>
+Gaji: RM5000 - RM15000
+<br><br>
+Kemahiran:
+<ul>
+<li>Artificial Intelligence</li>
+<li>Python</li>
+<li>Machine Learning</li>
+</ul>
+</div>
+
+<div class="stat">
+<h3>🛡️ Cybersecurity Analyst</h3>
+Gaji: RM4500 - RM12000
+<br><br>
+Kemahiran:
+<ul>
+<li>Keselamatan Siber</li>
+<li>Networking</li>
+<li>Ethical Hacking</li>
+</ul>
+</div>
+
+<div class="stat">
+<h3>📊 Data Scientist</h3>
+Gaji: RM5000 - RM18000
+<br><br>
+Kemahiran:
+<ul>
+<li>Analisis Data</li>
+<li>Statistik</li>
+<li>Python</li>
+</ul>
+</div>
+
+<div class="stat">
+<h3>🤖 Robotics Engineer</h3>
+Gaji: RM4500 - RM12000
+<br><br>
+Kemahiran:
+<ul>
+<li>Robotik</li>
+<li>Elektronik</li>
+<li>Automasi</li>
+</ul>
+</div>
+
+<div class="stat">
+<h3>☁️ Cloud Engineer</h3>
+Gaji: RM4500 - RM15000
+<br><br>
+Kemahiran:
+<ul>
+<li>Cloud Computing</li>
+<li>AWS</li>
+<li>Google Cloud</li>
+</ul>
+</div>
+
+<div class="stat">
+<h3>🧬 Biotech Researcher</h3>
+Gaji: RM4000 - RM10000
+<br><br>
+Kemahiran:
+<ul>
+<li>Bioteknologi</li>
+<li>Penyelidikan</li>
+<li>Sains Hayat</li>
+</ul>
+</div>
+
+</div>
+
+<div class="card" style="margin-top:20px">
+
+<h3>🚀 Kemahiran Masa Depan</h3>
+
+✅ Artificial Intelligence (AI)<br>
+✅ Data Analytics<br>
+✅ Programming<br>
+✅ Cybersecurity<br>
+✅ Robotics & Automation<br>
+✅ Critical Thinking<br>
+✅ Communication Skills
+
+</div>
+
+</div>
+
+`;
+
+}
+
 loadAnalytics();
 </script>
 </body>
