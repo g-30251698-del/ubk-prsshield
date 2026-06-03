@@ -178,7 +178,9 @@ height:auto;
 🎯 Hala Tuju Selepas SPM
 </button>
 
-<button class="menu-btn">🧠 Inventori Minat Kerjaya</button>
+<button class="menu-btn" onclick="loadInventoriRIASEC()">
+🧠 Inventori Minat Kerjaya
+</button>
 
 <button class="menu-btn">🏛️ IPTA / IPTS / TVET</button>
 
@@ -577,6 +579,154 @@ SPM
 `;
 
 }
+function loadInventoriRIASEC(){
+
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+
+<h2>🧠 Inventori Minat Kerjaya RIASEC</h2>
+
+<p>Jawab semua soalan dengan jujur.</p>
+
+<div id="soalanRIASEC"></div>
+
+<br>
+
+<button onclick="kiraRIASEC()">
+📊 Lihat Keputusan
+</button>
+
+<div id="hasilRIASEC"></div>
+
+</div>
+
+`;
+
+paparSoalan();
+
+}
+const soalanRIASEC = [
+
+{soalan:"Saya suka membaiki mesin.", kategori:"R"},
+{soalan:"Saya suka kerja luar bangunan.", kategori:"R"},
+{soalan:"Saya suka menggunakan peralatan teknikal.", kategori:"R"},
+{soalan:"Saya suka membina sesuatu.", kategori:"R"},
+{soalan:"Saya suka kerja praktikal.", kategori:"R"},
+
+{soalan:"Saya suka eksperimen sains.", kategori:"I"},
+{soalan:"Saya suka menyelesaikan masalah kompleks.", kategori:"I"},
+{soalan:"Saya suka matematik.", kategori:"I"},
+{soalan:"Saya suka membuat kajian.", kategori:"I"},
+{soalan:"Saya suka menganalisis data.", kategori:"I"},
+
+{soalan:"Saya suka melukis.", kategori:"A"},
+{soalan:"Saya suka menulis.", kategori:"A"},
+{soalan:"Saya suka muzik.", kategori:"A"},
+{soalan:"Saya suka reka bentuk.", kategori:"A"},
+{soalan:"Saya suka kerja kreatif.", kategori:"A"},
+
+{soalan:"Saya suka membantu orang.", kategori:"S"},
+{soalan:"Saya suka mengajar.", kategori:"S"},
+{soalan:"Saya suka mendengar masalah orang.", kategori:"S"},
+{soalan:"Saya suka aktiviti komuniti.", kategori:"S"},
+{soalan:"Saya suka bekerjasama.", kategori:"S"},
+
+{soalan:"Saya suka berniaga.", kategori:"E"},
+{soalan:"Saya suka memimpin.", kategori:"E"},
+{soalan:"Saya suka membuat keputusan.", kategori:"E"},
+{soalan:"Saya suka mempengaruhi orang.", kategori:"E"},
+{soalan:"Saya suka projek keusahawanan.", kategori:"E"},
+
+{soalan:"Saya suka mengurus fail.", kategori:"C"},
+{soalan:"Saya suka kerja tersusun.", kategori:"C"},
+{soalan:"Saya suka nombor.", kategori:"C"},
+{soalan:"Saya suka jadual dan rekod.", kategori:"C"},
+{soalan:"Saya suka prosedur yang jelas.", kategori:"C"}
+
+];
+function paparSoalan(){
+
+let html = "";
+
+soalanRIASEC.forEach((s,index)=>{
+
+html += `
+
+<p>
+${index+1}. ${s.soalan}
+</p>
+
+<select id="q${index}">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+
+<hr>
+
+`;
+
+});
+
+document.getElementById("soalanRIASEC").innerHTML = html;
+
+}
+function kiraRIASEC(){
+
+let skor = {
+R:0,
+I:0,
+A:0,
+S:0,
+E:0,
+C:0
+};
+
+soalanRIASEC.forEach((s,index)=>{
+
+let nilai =
+parseInt(document.getElementById(`q${index}`).value);
+
+skor[s.kategori] += nilai;
+
+});
+
+let keputusan =
+Object.entries(skor)
+.sort((a,b)=>b[1]-a[1]);
+
+let utama = keputusan[0][0];
+
+let nama = "";
+
+if(utama=="R") nama="🚜 Realistic";
+if(utama=="I") nama="🔬 Investigative";
+if(utama=="A") nama="🎨 Artistic";
+if(utama=="S") nama="🤝 Social";
+if(utama=="E") nama="💼 Enterprising";
+if(utama=="C") nama="📊 Conventional";
+
+document.getElementById("hasilRIASEC").innerHTML = `
+
+<div class="card" style="margin-top:20px">
+
+<h3>Keputusan Anda</h3>
+
+<h2>${nama}</h2>
+
+<p>
+Kod Dominan: ${utama}
+</p>
+
+</div>
+
+`;
+
+}
+
 loadAnalytics();
 </script>
 </body>
