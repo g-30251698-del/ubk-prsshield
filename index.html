@@ -194,7 +194,9 @@ height:auto;
 🔬 STEM Future Jobs
 </button>
 
-<button class="menu-btn">👨‍🏫 Dashboard Guru</button>
+<button class="menu-btn" onclick="loadGuruDashboard()">
+👨‍🏫 Dashboard Guru
+</button>
 
 </div>
 
@@ -1012,7 +1014,89 @@ Kemahiran:
 `;
 
 }
+function loadGuruDashboard(){
 
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+<h2>👨‍🏫 Dashboard Guru PRS SHIELD</h2>
+<p>Pemantauan trend kerjaya dan minat murid.</p>
+</div>
+
+<div class="grid">
+
+<div class="stat">
+<h3>👥 Jumlah Pelajar</h3>
+<p style="font-size:30px;font-weight:bold;">
+126
+</p>
+</div>
+
+<div class="stat">
+<h3>🧠 Top RIASEC</h3>
+<p style="font-size:24px;font-weight:bold;">
+Investigatif (I)
+</p>
+</div>
+
+<div class="stat">
+<h3>🏆 Kerjaya Popular</h3>
+<p style="font-size:24px;font-weight:bold;">
+Data Scientist
+</p>
+</div>
+
+<div class="stat">
+<h3>🎓 Laluan Popular</h3>
+<p style="font-size:24px;font-weight:bold;">
+IPTA
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<h3>📊 Statistik Sekolah</h3>
+
+<p>✅ Inventori Minat Dijawab : 126 murid</p>
+
+<p>✅ Hala Tuju Dilihat : 210 kali</p>
+
+<p>✅ Ensiklopedia Kerjaya Dilihat : 340 kali</p>
+
+<p>✅ Biasiswa Dicari : 145 kali</p>
+
+</div>
+
+<div class="card">
+<h3>🏅 Top 5 Kerjaya Pilihan Murid</h3>
+
+<ol>
+<li>Data Scientist</li>
+<li>AI Engineer</li>
+<li>Cybersecurity Analyst</li>
+<li>Doktor Perubatan</li>
+<li>Jurutera Aeroangkasa</li>
+</ol>
+
+</div>
+
+<div class="card">
+<h3>📌 Cadangan Program Sekolah</h3>
+
+<ul>
+<li>Hari Kerjaya STEM</li>
+<li>Lawatan Universiti Awam</li>
+<li>Bengkel AI dan Data</li>
+<li>Pameran TVET</li>
+<li>Ceramah Biasiswa</li>
+</ul>
+
+</div>
+
+`;
+
+}
 loadAnalytics();
 </script>
 </body>
