@@ -250,6 +250,25 @@ Biotech Researcher
 
 </div>
 <div class="stat" style="margin-top:20px;">
+  <div class="stat">
+<h3>📊 Analisis Pengguna</h3>
+
+<p>
+👥 Jumlah Pelawat:
+<span id="jumlahPelawat">0</span>
+</p>
+
+<p>
+💬 Jumlah Komen:
+<span id="jumlahKomen">0</span>
+</p>
+
+<p>
+🕒 Kemaskini Terakhir:
+<span id="masaKemaskini">-</span>
+</p>
+
+</div>
 <h3>📝 Buku Pelawat Maya</h3>
 
 <input id="nama" placeholder="Nama"
@@ -276,7 +295,20 @@ const SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbzXSsvgu80cR19qQo-ktfE6po3fQ3GmosJrH5URjouXtJryA9qGPQ6bGIdSBuNYo-H66g/exec";
 
 function submitVisitor(){
+fetch(SCRIPT_URL)
+.then(res=>res.json())
+.then(data=>{
 
+document.getElementById("jumlahPelawat").innerHTML =
+data.pelawat;
+
+document.getElementById("jumlahKomen").innerHTML =
+data.komen;
+
+document.getElementById("masaKemaskini").innerHTML =
+new Date(data.masa).toLocaleString();
+
+});
 const data = {
 nama: document.getElementById("nama").value,
 sekolah: document.getElementById("sekolah").value,
