@@ -174,7 +174,9 @@ height:auto;
 📚 Ensiklopedia Kerjaya
 </button>
 
-<button class="menu-btn">🎯 Hala Tuju Selepas SPM</button>
+<button class="menu-btn" onclick="loadHalaTuju()">
+🎯 Hala Tuju Selepas SPM
+</button>
 
 <button class="menu-btn">🧠 Inventori Minat Kerjaya</button>
 
@@ -346,6 +348,8 @@ new Date(data.masa).toLocaleString();
 .catch(err => console.log(err));
 
 }
+  
+}
 let allCareers = [];
 
 function loadCareerPage(){
@@ -432,6 +436,148 @@ function searchCareer(){
   );
 
   displayCareers(filtered);
+}
+function loadHalaTuju(){
+
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+
+<h2>🎯 Hala Tuju Selepas SPM</h2>
+
+<p>Pilih laluan yang diminati:</p>
+
+<button onclick="showSTEM()">
+🔬 STEM
+</button>
+
+<button onclick="showTVET()">
+🛠 TVET
+</button>
+
+<button onclick="showSastera()">
+📚 Sastera
+</button>
+
+<br><br>
+
+<div id="halaTujuResult"></div>
+
+</div>
+
+`;
+
+}
+function showSTEM(){
+
+document.getElementById("halaTujuResult").innerHTML = `
+
+<div class="card" style="margin-top:15px">
+
+<h3>🔬 Laluan STEM</h3>
+
+<p>
+
+SPM STEM
+
+<br><br>⬇
+
+<br><br>Matrikulasi / STPM / Asasi
+
+<br><br>⬇
+
+<br><br>Ijazah STEM
+
+<br><br>⬇
+
+<br><br>Data Scientist
+
+<br>AI Engineer
+
+<br>Cybersecurity Analyst
+
+<br>Jurutera
+
+</p>
+
+</div>
+
+`;
+
+}
+function showTVET(){
+
+document.getElementById("halaTujuResult").innerHTML = `
+
+<div class="card" style="margin-top:15px">
+
+<h3>🛠 Laluan TVET</h3>
+
+<p>
+
+SPM
+
+<br><br>⬇
+
+<br><br>Kolej Vokasional
+
+<br>Politeknik
+
+<br>ILP
+
+<br><br>⬇
+
+<br><br>Juruteknik
+
+<br>Teknologis
+
+<br>Penyelia Industri
+
+</p>
+
+</div>
+
+`;
+
+}
+function showSastera(){
+
+document.getElementById("halaTujuResult").innerHTML = `
+
+<div class="card" style="margin-top:15px">
+
+<h3>📚 Laluan Sastera</h3>
+
+<p>
+
+SPM
+
+<br><br>⬇
+
+<br><br>STPM / Diploma
+
+<br><br>⬇
+
+<br><br>Ijazah Pendidikan
+
+<br>Komunikasi
+
+<br>Perniagaan
+
+<br><br>⬇
+
+<br><br>Guru
+
+<br>Pegawai Tadbir
+
+<br>Usahawan
+
+</p>
+
+</div>
+
+`;
+
 }
 loadAnalytics();
 </script>
