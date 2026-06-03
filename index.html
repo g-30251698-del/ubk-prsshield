@@ -170,7 +170,9 @@ height:auto;
 
 <button class="menu-btn">🏠 Dashboard</button>
 
-<button class="menu-btn">📚 Ensiklopedia Kerjaya</button>
+<button class="menu-btn" onclick="loadCareerPage()">
+📚 Ensiklopedia Kerjaya
+</button>
 
 <button class="menu-btn">🎯 Hala Tuju Selepas SPM</button>
 
@@ -198,7 +200,7 @@ laluan pendidikan, pembangunan sahsiah dan perancangan masa depan.
 </p>
 
 </div>
-
+<div id="careerContainer"></div>
 <div class="grid">
 
 <div class="stat">
@@ -344,7 +346,93 @@ new Date(data.masa).toLocaleString();
 .catch(err => console.log(err));
 
 }
+let allCareers = [];
 
+function loadCareerPage(){
+
+  document.querySelector(".content").innerHTML = `
+    <div class="card">
+      <h2>📚 Ensiklopedia Kerjaya</h2>
+
+      <input
+        type="text"
+        id="careerSearch"
+        placeholder="Cari kerjaya..."
+        onkeyup="searchCareer()"
+        style="width:100%;padding:12px;margin:10px 0;border-radius:8px;"
+      >
+
+      <div id="careerResults"></div>
+    </div>
+  `;
+
+  loadCareers();
+}
+
+function loadCareers(){
+
+  fetch("careers.json")
+    .then(res => res.json())
+    .then(data => {
+
+      allCareers = data;
+
+      displayCareers(data);
+
+    })
+    .catch(err => {
+
+      document.getElementById("careerResults").innerHTML =
+      "Ralat memuatkan careers.json";
+
+      console.log(err);
+
+    });
+}
+
+function displayCareers(data){
+
+  let html = "";
+
+  data.forEach(career => {
+
+    html += `
+      <div class="card" style="margin-top:15px;">
+        <h3>${career.ikon} ${career.nama}</h3>
+
+        <p><b>Kategori:</b> ${career.kategori}</p>
+
+        <p><b>Minat:</b> ${career.minat.join(", ")}</p>
+
+        <p><b>Gaji:</b> RM${career.gaji_masuk}
+        - RM${career.gaji_maksimum}</p>
+
+        <p>${career.deskripsi}</p>
+
+      </div>
+    `;
+  });
+
+  document.getElementById("careerResults").innerHTML = html;
+}
+
+function searchCareer(){
+
+  const keyword =
+    document.getElementById("careerSearch")
+    .value
+    .toLowerCase();
+
+  const filtered = allCareers.filter(career =>
+
+    career.nama.toLowerCase().includes(keyword) ||
+
+    career.kategori.toLowerCase().includes(keyword)
+
+  );
+
+  displayCareers(filtered);
+}
 loadAnalytics();
 </script>
 </body>
