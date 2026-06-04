@@ -461,15 +461,15 @@ document.querySelector(".content").innerHTML = `
 
 <br>
 
-<button class="menu-btn">
+<button class="menu-btn" onclick="loadSTEMPath()">
 🔬 STEM
 </button>
 
-<button class="menu-btn">
+<button class="menu-btn" onclick="loadTVETPath()">
 🛠 TVET
 </button>
 
-<button class="menu-btn">
+<button class="menu-btn" onclick="loadSasteraPath()">
 📚 Sastera
 </button>
 
@@ -1371,6 +1371,104 @@ Cuba lagi!
 `;
 
 }
+
+}
+function loadSTEMPath(){
+
+document.querySelector(".content").innerHTML=`
+
+<div class="card">
+
+<h2>🔬 Laluan STEM</h2>
+
+<h3>Kursus Popular</h3>
+
+<ul>
+<li>Kejuruteraan</li>
+<li>Sains Komputer</li>
+<li>Perubatan</li>
+<li>Bioteknologi</li>
+<li>Sains Data</li>
+</ul>
+
+<h3>Kerjaya STEM</h3>
+
+<ul>
+<li>AI Engineer</li>
+<li>Doktor</li>
+<li>Jurutera</li>
+<li>Data Scientist</li>
+<li>Cybersecurity Analyst</li>
+</ul>
+
+</div>
+
+`;
+
+}
+
+function loadTVETPath(){
+
+document.querySelector(".content").innerHTML=`
+
+<div class="card">
+
+<h2>🛠 Laluan TVET</h2>
+
+<h3>Bidang TVET</h3>
+
+<ul>
+<li>Automotif</li>
+<li>Elektrik</li>
+<li>Kimpalan</li>
+<li>Teknologi Pembinaan</li>
+<li>Penyejukan dan Penyaman Udara</li>
+</ul>
+
+<h3>Peluang Kerjaya</h3>
+
+<ul>
+<li>Juruteknik</li>
+<li>Penyelia Tapak</li>
+<li>Usahawan Teknikal</li>
+</ul>
+
+</div>
+
+`;
+
+}
+
+function loadSasteraPath(){
+
+document.querySelector(".content").innerHTML=`
+
+<div class="card">
+
+<h2>📚 Laluan Sastera</h2>
+
+<h3>Kursus Popular</h3>
+
+<ul>
+<li>Undang-Undang</li>
+<li>Pendidikan</li>
+<li>Komunikasi Massa</li>
+<li>Psikologi</li>
+<li>Pentadbiran Perniagaan</li>
+</ul>
+
+<h3>Kerjaya</h3>
+
+<ul>
+<li>Peguam</li>
+<li>Guru</li>
+<li>Kaunselor</li>
+<li>Pegawai Tadbir</li>
+</ul>
+
+</div>
+
+`;
 
 }
 function checkAnswer(btn, correct){
