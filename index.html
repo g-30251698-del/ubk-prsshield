@@ -337,8 +337,10 @@ fetch(SCRIPT_URL)
 document.getElementById("jumlahPelawat").innerHTML =
 data.pelawat;
 
+console.log(data);
+
 document.getElementById("masaKemaskini").innerHTML =
-new Date(data.masa).toLocaleString("ms-MY");
+data.masa;
 
 })
 .catch(err => console.log(err));
