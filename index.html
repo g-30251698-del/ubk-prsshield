@@ -1439,18 +1439,16 @@ Chef
 
 function detective(j){
 
-document.getElementById("detectiveResult").innerHTML=
-j==="A"
-?
-"🏆 Betul!"
-:
-"❌ Salah";
-
-</div>
-
-`;
-
+if(j==="A"){
+document.getElementById("detectiveResult").innerHTML =
+"<h3>🏆 Betul! Radiographer</h3>";
+}else{
+document.getElementById("detectiveResult").innerHTML =
+"<h3>❌ Salah!</h3>";
 }
+  
+}
+
 function loadSpinCareer(){
 
 const jobs=[
