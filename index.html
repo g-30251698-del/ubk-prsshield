@@ -223,6 +223,9 @@ padding:16px;
 <button class="menu-btn" onclick="loadInventoriRIASEC()">
 🧠 Inventori Minat Kerjaya
 </button>
+<button onclick="loadSTEMExplorer()">
+🎮 STEM Explorer Challenge
+</button>
 
 <button class="menu-btn" onclick="loadIPTA()">
 🏛 IPTA / IPTS / TVET
@@ -1199,6 +1202,92 @@ IPTA
 
 }
 loadAnalytics();
+function loadSTEMExplorer(){
+
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+
+<h2>🎮 STEM Explorer Challenge</h2>
+
+<p>
+
+Uji pengetahuan STEM anda dan terokai
+laluan kerjaya masa depan!
+
+</p>
+
+<h3>🧠 Soalan 1</h3>
+
+<p>
+
+Kerjaya manakah berkaitan dengan
+Kecerdasan Buatan (AI)?
+
+</p>
+
+<button onclick="jawapanSTEM('A')">
+A. Chef
+</button>
+
+<button onclick="jawapanSTEM('B')">
+B. AI Engineer
+</button>
+
+<button onclick="jawapanSTEM('C')">
+C. Peguam
+</button>
+
+<div id="stemResult"></div>
+
+</div>
+
+`;
+
+}
+function jawapanSTEM(jawapan){
+
+if(jawapan=="B"){
+
+document.getElementById("stemResult").innerHTML = `
+
+<div class="card">
+
+<h2>🏆 Tahniah!</h2>
+
+<p>
+
+Anda berjaya menjawab dengan betul.
+
+AI Engineer merupakan salah satu
+kerjaya STEM yang paling mendapat
+permintaan pada masa hadapan.
+
+</p>
+
+<h3>🥇 STEM Explorer Champion</h3>
+
+</div>
+
+`;
+
+}else{
+
+document.getElementById("stemResult").innerHTML = `
+
+<div class="card">
+
+❌ Jawapan kurang tepat.
+
+Cuba lagi!
+
+</div>
+
+`;
+
+}
+
+}
 </script>
 </body>
 </html>
