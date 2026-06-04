@@ -1523,21 +1523,13 @@ Automatic Internet
 
 function millionaire(j){
 
-document.getElementById(
-"millionaireResult"
-).innerHTML=
-
-j==="A"
-
-?
-
-"💰 RM1,000,000 STEM!"
-
-:
-
-"❌ </div>
-
-`;
+if(j==="A"){
+document.getElementById("millionaireResult").innerHTML =
+"<h3>💰 RM1,000,000 STEM!</h3>";
+}else{
+document.getElementById("millionaireResult").innerHTML =
+"<h3>❌ Salah!</h3>";
+}
 
 }
 function loadRIASECQuest(){
