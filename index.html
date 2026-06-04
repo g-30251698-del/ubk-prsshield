@@ -1352,7 +1352,17 @@ Cuba lagi!
 }
 
 }
-  
+function checkAnswer(btn, correct){
+
+    if(correct){
+        btn.style.background="green";
+        alert("✅ Betul!");
+    }else{
+        btn.style.background="red";
+        alert("❌ Salah!");
+    }
+
+} 
 </script>
 </body>
 </html>
