@@ -340,8 +340,11 @@ data.pelawat;
 document.getElementById("jumlahKomen").innerHTML =
 data.komen;
 
+document.getElementById("jumlahPelawat").innerHTML =
+data.pelawat;
+
 document.getElementById("masaKemaskini").innerHTML =
-new Date(data.masa).toLocaleString();f
+new Date(data.masa).toLocaleString("ms-MY");
 
 })
 .catch(err => console.log(err));
