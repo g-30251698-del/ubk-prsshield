@@ -223,6 +223,10 @@ padding:16px;
 
 <button class="menu-btn">🏠 Dashboard</button>
 
+<button class="menu-btn" onclick="loadEKaunseling()">
+🌟 e-Kaunseling SHIELD
+</button>
+
 <button class="menu-btn" onclick="loadCareerPage()">
 📚 Ensiklopedia Kerjaya
 </button>
@@ -1529,6 +1533,61 @@ function checkAnswer(btn, correct){
         btn.style.background="red";
         alert("❌ Salah!");
     }
+
+} 
+function loadEKaunseling(){
+
+document.querySelector(".content").innerHTML=`
+
+<div class="card">
+
+<h2>🌟 e-Kaunseling SHIELD</h2>
+
+<p>
+<b>Kenali Diri, Terokai Potensi, Rancang Masa Depan</b>
+</p>
+
+<p>
+Selamat datang ke e-Kaunseling SHIELD.
+Modul ini membantu murid mengenali minat,
+potensi, laluan pendidikan dan kerjaya yang sesuai.
+</p>
+
+<div class="grid">
+
+<div class="stat">
+<h3>🤖 Pembantu Pintar SHIELD</h3>
+<p>
+Cadangan kerjaya berdasarkan minat murid.
+</p>
+</div>
+
+<div class="stat">
+<h3>🧠 Inventori Minat</h3>
+<p>
+Kenal pasti bidang yang paling diminati.
+</p>
+</div>
+
+<div class="stat">
+<h3>🧬 Profil Potensi Diri</h3>
+<p>
+Analisis kekuatan dan kecenderungan kerjaya.
+</p>
+</div>
+
+<div class="stat">
+<h3>🎓 Laluan Pendidikan</h3>
+<p>
+Cadangan laluan selepas SPM.
+</p>
+</div>
+
+</div>
+
+</div>
+
+`;
 
 } 
 </script>
