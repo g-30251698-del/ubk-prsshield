@@ -108,7 +108,19 @@ flex:1;
 padding:30px;
 overflow-y:auto;
 }
+.grid-kaunseling{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
 
+.modul-card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
 .card{
 background:white;
 border-radius:20px;
@@ -1536,11 +1548,41 @@ document.querySelector(".content").innerHTML=`
 <b>Kenali Diri, Terokai Potensi, Rancang Masa Depan</b>
 </p>
 
+</div>
 <p>
 Selamat datang ke e-Kaunseling SHIELD.
 Modul ini membantu murid mengenali minat,
 potensi, laluan pendidikan dan kerjaya yang sesuai.
 </p>
+
+<div class="grid-kaunseling">
+
+    <div class="modul-card">
+        <h3>📊 Kiraan Mata Merit</h3>
+        <p>Semak anggaran merit UPU.</p>
+        <button class="menu-btn">Buka Kalkulator Merit</button>
+    </div>
+
+    <div class="modul-card">
+        <h3>🤖 Pembantu Pintar SHIELD</h3>
+        <p>Cadangan kerjaya berdasarkan minat.</p>
+        <button class="menu-btn">Mulakan Analisis</button>
+    </div>
+
+    <div class="modul-card">
+        <h3>🧠 Inventori Minat</h3>
+        <p>Kenal pasti bidang diminati.</p>
+        <button class="menu-btn">Buka Inventori Minat</button>
+    </div>
+
+    <div class="modul-card">
+        <h3>🧬 Profil Potensi Diri</h3>
+        <p>Analisis potensi diri.</p>
+        <button class="menu-btn">Buka Profil Potensi</button>
+    </div>
+
+</div>
+
 <div class="stat">
 
 <h3>📊 Kiraan Mata Merit</h3>
