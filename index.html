@@ -1582,7 +1582,19 @@ Analisis kekuatan dan kecenderungan kerjaya.
 Cadangan laluan selepas SPM.
 </p>
 </div>
+<div class="stat">
 
+<h3>📊 Kiraan Mata Merit</h3>
+
+<p>
+Semak anggaran merit UPU dan pilihan laluan yang sesuai dengan keputusan anda.
+</p>
+
+<button class="menu-btn" onclick="loadMeritCalculator()">
+🧮 Buka Kalkulator Merit
+</button>
+
+</div>
 </div>
 
 </div>
@@ -1590,6 +1602,33 @@ Cadangan laluan selepas SPM.
 `;
 
 } 
+function loadMeritCalculator(){
+
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+
+<h2>📊 Kalkulator Merit UPU</h2>
+
+<p>
+Semak anggaran merit UPU berdasarkan keputusan peperiksaan anda.
+</p>
+
+<div class="stat">
+
+<h3>🧮 Modul Dalam Pembinaan</h3>
+
+<p>
+Versi pertama kalkulator merit sedang dibangunkan untuk membantu murid membuat perancangan pendidikan yang lebih realistik.
+</p>
+
+</div>
+
+</div>
+
+`;
+
+}
 </script>
 </body>
 </html>
