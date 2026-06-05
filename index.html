@@ -1556,12 +1556,18 @@ potensi, laluan pendidikan dan kerjaya yang sesuai.
 <div class="grid">
 
 <div class="stat">
+
 <h3>🤖 Pembantu Pintar SHIELD</h3>
+
 <p>
 Cadangan kerjaya berdasarkan minat murid.
 </p>
-</div>
 
+<button class="menu-btn" onclick="loadPembantuPintar()">
+🚀 Mulakan Analisis
+</button>
+
+</div>
 <div class="stat">
 <h3>🧠 Inventori Minat</h3>
 <p>
@@ -1635,6 +1641,200 @@ kelayakan program pengajian.
 `;
 
 }
+function loadPembantuPintar(){
+
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+
+<h2>🤖 Pembantu Pintar SHIELD</h2>
+
+<p>
+Jawab 3 soalan mudah untuk mendapatkan cadangan awal kerjaya dan laluan pendidikan.
+</p>
+
+<div class="stat">
+
+<h3>1️⃣ Bidang yang paling anda minati</h3>
+
+<select id="minat">
+<option>STEM</option>
+<option>Perniagaan</option>
+<option>Kreatif</option>
+<option>Sosial</option>
+<option>Teknikal</option>
+</select>
+
+</div>
+
+<br>
+
+<div class="stat">
+
+<h3>2️⃣ Aktiviti yang paling anda suka</h3>
+
+<select id="aktiviti">
+<option>Menyelesaikan Masalah</option>
+<option>Mencipta Sesuatu</option>
+<option>Membantu Orang</option>
+<option>Mengurus dan Memimpin</option>
+<option>Mengendalikan Peralatan</option>
+</select>
+
+</div>
+
+<br>
+
+<div class="stat">
+
+<h3>3️⃣ Matlamat selepas SPM</h3>
+
+<select id="matlamat">
+<option>Sambung Belajar</option>
+<option>Terus Bekerja</option>
+<option>Belum Pasti</option>
+</select>
+
+</div>
+
+<br>
+
+<button class="menu-btn" onclick="analisisSHIELD()">
+🔍 Analisis Saya
+</button>
+
+<div id="hasilSHIELD"></div>
+
+</div>
+
+`;
+
+}
+function analisisSHIELD(){
+
+let minat = document.getElementById("minat").value;
+
+let hasil = "";
+
+if(minat=="STEM"){
+
+hasil = `
+<div class="card">
+
+<h2>🌟 Profil Awal SHIELD</h2>
+
+<p>
+Anda menunjukkan kecenderungan dalam bidang STEM.
+</p>
+
+<p>
+✅ Data Scientist<br>
+✅ AI Engineer<br>
+✅ Jurutera Perisian
+</p>
+
+<p>
+🎓 Laluan:
+SPM → STPM / Matrikulasi → Ijazah STEM
+</p>
+
+</div>
+`;
+
+}
+
+else if(minat=="Perniagaan"){
+
+hasil = `
+<div class="card">
+
+<h2>🌟 Profil Awal SHIELD</h2>
+
+<p>
+Anda menunjukkan kecenderungan dalam bidang Perniagaan.
+</p>
+
+<p>
+✅ Akauntan<br>
+✅ Pegawai Pemasaran<br>
+✅ Usahawan
+</p>
+
+</div>
+`;
+
+}
+
+else if(minat=="Kreatif"){
+
+hasil = `
+<div class="card">
+
+<h2>🌟 Profil Awal SHIELD</h2>
+
+<p>
+Anda menunjukkan kecenderungan dalam bidang Kreatif.
+</p>
+
+<p>
+✅ Pereka Grafik<br>
+✅ Animator<br>
+✅ Pencipta Kandungan
+</p>
+
+</div>
+`;
+
+}
+
+else if(minat=="Sosial"){
+
+hasil = `
+<div class="card">
+
+<h2>🌟 Profil Awal SHIELD</h2>
+
+<p>
+Anda menunjukkan kecenderungan dalam bidang Sosial.
+</p>
+
+<p>
+✅ Guru<br>
+✅ Kaunselor<br>
+✅ Pegawai Psikologi
+</p>
+
+</div>
+`;
+
+}
+
+else{
+
+hasil = `
+<div class="card">
+
+<h2>🌟 Profil Awal SHIELD</h2>
+
+<p>
+Anda menunjukkan kecenderungan dalam bidang Teknikal.
+</p>
+
+<p>
+✅ Juruteknik<br>
+✅ Teknologis<br>
+✅ Penyelia Operasi
+</p>
+
+</div>
+`;
+
+}
+
+document.getElementById("hasilSHIELD").innerHTML = hasil;
+
+}
+
 </script>
 </body>
 </html>
