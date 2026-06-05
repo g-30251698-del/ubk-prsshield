@@ -1939,9 +1939,6 @@ Kenali kekuatan dan kecenderungan diri berdasarkan minat dan potensi anda.
 `;
 
 }
-function loadPemilihanBidangKerjaya(){
-
-document.querySelector(".content").innerHTML = `
 
 <div class="card">
 
@@ -1983,10 +1980,10 @@ Tiada jawapan betul atau salah.
 
 <label><input type="checkbox"> Matematik Gunaan</label>
 
-<button class="menu-btn">✅ SimpanPilihanSaya()">
-function simpanPilihanAwal(){
-
-alert("🎯 Pilihan awal anda berjaya direkodkan.");
+<button class="menu-btn"
+onclick="loadPemilihanBidangKerjaya()">
+🧬 Mulakan Pilihan Anda
+</button>
 
 </div>
 
@@ -2034,9 +2031,21 @@ Versi seterusnya akan memaparkan senarai kerjaya STEM.
 `;
 
 }
-function simpanPilihanSaya(){
+function loadPemilihanBidangKerjaya(){
 
-alert("🎯 Pilihan awal anda berjaya direkodkan.");
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+
+<h2>🎯 Pemilihan Bidang Kerjaya</h2>
+
+<p>
+Daripada 200 kerjaya STEM kepada 12 pilihan akhir yang anda yakini.
+</p>
+
+</div>
+
+`;
 
 }
 </script>
