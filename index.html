@@ -1204,16 +1204,8 @@ Kemahiran:
 }
 function loadGuruDashboard(){
 
-document.querySelector(".content").innerHTML = `SEMUA HTML AWAK`;
+document.querySelector(".content").innerHTML = `
 
-setTimeout(() => {
-const jumlah = document.getElementById("jumlahmurid");
-if(jumlah){
-jumlah.innerText = 126;
-}
-},100);
-
-}
 <div class="card">
 <h2>🛡️ Dashboard Guru UBK & PRS SHIELD</h2>
 <p>Pusat analitik minat, potensi dan hala tuju kerjaya murid.</p>
@@ -1260,8 +1252,8 @@ jumlah.innerText = 126;
 <div class="stat">
 <h3>👥 Jumlah murid</h3>
 <p id="jumlahmurid"
-style="font-size:30px;font-weight:bold;">
-0
+<p style="font-size:30px;font-weight:bold;">
+126
 </p>
 
 
