@@ -251,10 +251,9 @@ padding:16px;
 🧠 Inventori Minat Kerjaya
 </button>
   
-<button class="menu-btn" onclick="loadSTEMExplorer()">
-🎮 STEM Explorer Challenge
+<button class="menu-btn" onclick="loadSTEMCareerMatch()">
+🚀 STEM Career Match
 </button>
-
 
 <button class="menu-btn" onclick="loadIPTA()">
 🏛 IPTA / IPTS / TVET
@@ -1376,6 +1375,88 @@ IPTA
 }
 loadAnalytics();
   
+function loadSTEMCareerMatch(){
+
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+<h2>🚀 STEM Career Match SHIELD</h2>
+<p>Jawab soalan berikut untuk mengetahui bidang STEM yang sesuai dengan anda.</p>
+</div>
+
+<div class="card">
+
+<h3>1. Aktiviti yang paling saya suka</h3>
+
+<button class="menu-btn" onclick="kiraSTEM('ai')">
+💻 Menulis Kod Komputer
+</button>
+
+<button class="menu-btn" onclick="kiraSTEM('engineering')">
+⚙ Membina Mesin dan Robot
+</button>
+
+<button class="menu-btn" onclick="kiraSTEM('health')">
+🏥 Membantu Pesakit
+</button>
+
+<button class="menu-btn" onclick="kiraSTEM('environment')">
+🌱 Menjaga Alam Sekitar
+</button>
+
+<button class="menu-btn" onclick="kiraSTEM('cyber')">
+🛡 Melindungi Sistem Komputer
+</button>
+
+</div>
+
+<div id="stemResult"></div>
+
+`;
+
+}
+
+function loadSTEMCareerMatch(){
+
+document.querySelector(".content").innerHTML = `
+
+<div class="card">
+<h2>🚀 STEM Career Match SHIELD</h2>
+<p>Jawab soalan berikut untuk mengetahui bidang STEM yang sesuai dengan anda.</p>
+</div>
+
+<div class="card">
+
+<h3>1. Aktiviti yang paling saya suka</h3>
+
+<button class="menu-btn" onclick="kiraSTEM('ai')">
+💻 Menulis Kod Komputer
+</button>
+
+<button class="menu-btn" onclick="kiraSTEM('engineering')">
+⚙ Membina Mesin dan Robot
+</button>
+
+<button class="menu-btn" onclick="kiraSTEM('health')">
+🏥 Membantu Pesakit
+</button>
+
+<button class="menu-btn" onclick="kiraSTEM('environment')">
+🌱 Menjaga Alam Sekitar
+</button>
+
+<button class="menu-btn" onclick="kiraSTEM('cyber')">
+🛡 Melindungi Sistem Komputer
+</button>
+
+</div>
+
+<div id="stemResult"></div>
+
+`;
+
+}
+
   
 function loadSTEMPath(){
 
