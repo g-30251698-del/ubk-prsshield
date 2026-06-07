@@ -1482,25 +1482,25 @@ C. Jurujual
 
 <div id="stemResult"></div>
 
-function checkAnswer(jawapan){
+function checkAnswer(button, jawapan){
 
    if(jawapan){
-      document.getElementById("stemResult").innerHTML = `
-      <div class="card">
+
+      document.getElementById("stemResult").innerHTML =
+      `<div class="card">
          <h2>🏆 Tahniah!</h2>
          <p>Jawapan betul!</p>
        </div>`;
 
    } else {
 
-      document.getElementById("stemResult").innerHTML = `
-      <div class="card">
+      document.getElementById("stemResult").innerHTML =
+      `<div class="card">
          <h2>❌ Jawapan kurang tepat</h2>
          <p>Cuba lagi!</p>
        </div>`;
    }
 }
-  
 function loadSTEMPath(){
 
 document.querySelector(".content").innerHTML=`
