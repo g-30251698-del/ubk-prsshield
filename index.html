@@ -1484,48 +1484,24 @@ Siapakah yang mereka bentuk peralatan perubatan moden?</p>
 `;
 
 }
-function checkAnswer(jawapan){
+function checkAnswer(button, jawapan){
 
-if(jawapan=="B"){
+   if(jawapan){
 
-document.getElementById("stemResult").innerHTML = `
+      document.getElementById("stemResult").innerHTML =
+      `<div class="card">
+         <h2>🏆 Tahniah!</h2>
+         <p>Jawapan betul!</p>
+       </div>`;
 
-<div class="card">
+   } else {
 
-<h2>🏆 Tahniah!</h2>
-
-<p>
-
-Anda berjaya menjawab dengan betul.
-
-AI Engineer merupakan salah satu
-kerjaya STEM yang paling mendapat
-permintaan pada masa hadapan.
-
-</p>
-
-<h3>🥇 STEM Explorer Champion</h3>
-
-</div>
-
-`;
-
-}else{
-
-document.getElementById("stemResult").innerHTML = `
-
-<div class="card">
-
-❌ Jawapan kurang tepat.
-
-Cuba lagi!
-
-</div>
-
-`;
-
-}
-
+      document.getElementById("stemResult").innerHTML =
+      `<div class="card">
+         <h2>❌ Jawapan kurang tepat</h2>
+         <p>Cuba lagi!</p>
+       </div>`;
+   }
 }
 function loadSTEMPath(){
 
