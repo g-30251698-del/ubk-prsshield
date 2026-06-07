@@ -1472,22 +1472,20 @@ Kerjaya yang berkaitan dengan tenaga solar?</p>
 
 <p><b>Soalan 10</b><br>
 Siapakah yang mereka bentuk peralatan perubatan moden?</p>
-<button class="menu-btn" onclick="checkAnswer('q10',true)">
+
 A. Biomedical Engineer
-</button>
-<button class="menu-btn" onclick="checkAnswer('q10',false)">
+<button class="menu-btn" onclick="checkAnswer(true)"></button>
 B. Peguam
-</button>
-<button class="menu-btn" onclick="checkAnswer('q10',false)">
+<button class="menu-btn" onclick="checkAnswer(false)"></button>
 C. Jurujual
-</button>
+<button class="menu-btn" onclick="checkAnswer(false)"></button>
 
-<div id="q10"></div>
+<div id="stemResult"></div>
 
-function checkAnswer(id, jawapan){
+function checkAnswer(jawapan){
 
    if(jawapan){
-      document.getElementById(id).innerHTML = `
+      document.getElementById("stemResult").innerHTML = `
       <div class="card">
          <h2>🏆 Tahniah!</h2>
          <p>Jawapan betul!</p>
@@ -1495,7 +1493,7 @@ function checkAnswer(id, jawapan){
 
    } else {
 
-      document.getElementById(id).innerHTML = `
+      document.getElementById("stemResult").innerHTML = `
       <div class="card">
          <h2>❌ Jawapan kurang tepat</h2>
          <p>Cuba lagi!</p>
