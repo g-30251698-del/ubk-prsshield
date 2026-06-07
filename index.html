@@ -1484,10 +1484,10 @@ C. Jurujual
 
 <div id="q10"></div>
 
-function checkAnswer(button, jawapan){
+function checkAnswer(id, jawapan){
 
    if(jawapan){
-
+      document.getElementById(id).innerHTML =
       `<div class="card">
          <h2>🏆 Tahniah!</h2>
          <p>Jawapan betul!</p>
@@ -1495,7 +1495,7 @@ function checkAnswer(button, jawapan){
 
    } else {
 
-      document.getElementById("stemResult").innerHTML =
+      document.getElementById(id).innerHTML =
       `<div class="card">
          <h2>❌ Jawapan kurang tepat</h2>
          <p>Cuba lagi!</p>
