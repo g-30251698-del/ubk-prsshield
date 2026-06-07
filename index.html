@@ -1416,47 +1416,115 @@ document.querySelector(".content").innerHTML = `
 
 }
 
-function loadSTEMCareerMatch(){
+function paparKeputusan(subjek){
 
-document.querySelector(".content").innerHTML = `
+let bidang = localStorage.getItem("stemAktiviti");
 
+let hasil = "";
+
+if(bidang=="ai"){
+
+hasil = `
 <div class="card">
-<h2>🚀 STEM Career Match SHIELD</h2>
-<p>Jawab soalan berikut untuk mengetahui bidang STEM yang sesuai dengan anda.</p>
-</div>
 
-<div class="card">
+<h2>🤖 Profil STEM Anda</h2>
 
-<h3>1. Aktiviti yang paling saya suka</h3>
+<h3>AI & Data Science</h3>
 
-<button class="menu-btn" onclick="kiraSTEM('ai')">
-💻 Menulis Kod Komputer
-</button>
-
-<button class="menu-btn" onclick="kiraSTEM('engineering')">
-⚙ Membina Mesin dan Robot
-</button>
-
-<button class="menu-btn" onclick="kiraSTEM('health')">
-🏥 Membantu Pesakit
-</button>
-
-<button class="menu-btn" onclick="kiraSTEM('environment')">
-🌱 Menjaga Alam Sekitar
-</button>
-
-<button class="menu-btn" onclick="kiraSTEM('cyber')">
-🛡 Melindungi Sistem Komputer
-</button>
+<ul>
+<li>AI Engineer</li>
+<li>Data Scientist</li>
+<li>Software Developer</li>
+</ul>
 
 </div>
-
-<div id="stemResult"></div>
-
 `;
 
 }
 
+else if(bidang=="cyber"){
+
+hasil = `
+<div class="card">
+
+<h2>🛡 Profil STEM Anda</h2>
+
+<h3>Cybersecurity</h3>
+
+<ul>
+<li>Cybersecurity Analyst</li>
+<li>Ethical Hacker</li>
+<li>Digital Forensics Specialist</li>
+</ul>
+
+</div>
+`;
+
+}
+
+else if(bidang=="engineering"){
+
+hasil = `
+<div class="card">
+
+<h2>⚙ Profil STEM Anda</h2>
+
+<h3>Engineering & Robotics</h3>
+
+<ul>
+<li>Mechanical Engineer</li>
+<li>Electrical Engineer</li>
+<li>Robotics Engineer</li>
+</ul>
+
+</div>
+`;
+
+}
+
+else if(bidang=="health"){
+
+hasil = `
+<div class="card">
+
+<h2>🏥 Profil STEM Anda</h2>
+
+<h3>Health & Biomedical</h3>
+
+<ul>
+<li>Doktor</li>
+<li>Ahli Farmasi</li>
+<li>Biomedical Engineer</li>
+</ul>
+
+</div>
+`;
+
+}
+
+else if(bidang=="environment"){
+
+hasil = `
+<div class="card">
+
+<h2>🌱 Profil STEM Anda</h2>
+
+<h3>Environmental Science</h3>
+
+<ul>
+<li>Environmental Scientist</li>
+<li>Climate Analyst</li>
+<li>Geologist</li>
+</ul>
+
+</div>
+`;
+
+}
+
+document.getElementById("stemResult").innerHTML = hasil;
+
+}
   
 function loadSTEMPath(){
 
