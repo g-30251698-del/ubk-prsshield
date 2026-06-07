@@ -1472,15 +1472,14 @@ Kerjaya yang berkaitan dengan tenaga solar?</p>
 
 <p><b>Soalan 10</b><br>
 Siapakah yang mereka bentuk peralatan perubatan moden?</p>
+<button class="menu-btn" onclick="checkAnswer(true)">A. Biomedical Engineer</button>
 
-A. Biomedical Engineer
-<button class="menu-btn" onclick="checkAnswer(true)"></button>
-B. Peguam
-<button class="menu-btn" onclick="checkAnswer(false)"></button>
-C. Jurujual
-<button class="menu-btn" onclick="checkAnswer(false)"></button>
+<button class="menu-btn" onclick="checkAnswer(false)">B. Peguam</button>
+
+<button class="menu-btn" onclick="checkAnswer(false)"C. Jurujual</button>
 
 <div id="stemResult"></div>
+
 
 function checkAnswer(button, jawapan){
 
@@ -1501,6 +1500,7 @@ function checkAnswer(button, jawapan){
        </div>`;
    }
 }
+  
 function loadSTEMPath(){
 
 document.querySelector(".content").innerHTML=`
